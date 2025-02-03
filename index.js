@@ -9,32 +9,41 @@ const botaoPausar = document.getElementById("pause");
 const botaoReiniciar = document.getElementById("reiniciar");
 const widget = document.getElementById("widget");
 
-// Função para formatar o tempo como MM:SS
+// Sumir
+function sumirButtons(){
+    botaoAdicionar.style.opacity = "0"
+    botaoIniciar.style.opacity = "0"
+    botaoPausar.style.opacity = "0"
+    botaoReiniciar.style.opacity = "0"
+}
+
+// formatar 
 function formatarTempo(segundos) {
     const minutos = Math.floor(segundos / 60);
     const seg = segundos % 60;
     return `${String(minutos).padStart(2, "0")}:${String(seg).padStart(2, "0")}`;
 }
 
-// Função para atualizar o display
+// atualizar 
 function atualizarDisplay() {
     displayTimer.textContent = formatarTempo(tempo);
 }
 
-// Adicionar 30 segundos
+// Adicionar 
 botaoAdicionar.addEventListener("click", () => {
     tempo += 30;
     atualizarDisplay();
 });
 
-// Reiniciar o timer
+// Reiniciar 
 botaoReiniciar.addEventListener("click", () => {
     tempo = 0;
     atualizarDisplay();
 });
 
-// Iniciar o timer
+// Iniciar
 botaoIniciar.addEventListener("click", () => {
+    sumirButtons()
     if (!intervaloTimer) {
         intervaloTimer = setInterval(() => {
             if (tempo > 0) {
@@ -43,27 +52,30 @@ botaoIniciar.addEventListener("click", () => {
             } else {
                 clearInterval(intervaloTimer);
                 intervaloTimer = null;
-                alert("Tempo esgotado!");
+                botaoAdicionar.style.opacity = "1"
+                botaoIniciar.style.opacity = "1"
+                botaoPausar.style.opacity = "1"
+                botaoReiniciar.style.opacity = "1"
             }
         }, 1000);
     }
 });
 
-// Pausar o timer
+// Pausar 
 botaoPausar.addEventListener("click", () => {
     clearInterval(intervaloTimer);
     intervaloTimer = null;
 });
 
-// Função para alternar a visibilidade do widget
-function alternarVisibilidade() {
-    widget.style.opacity = widget.style.opacity === "0" ? "1" : "0";
-}
+// visibilidade
+// function alternarVisibilidade() {
+//     widget.style.opacity = widget.style.opacity === "0" ? "1" : "0";
+// }
 
 // Inicializar o display
 atualizarDisplay();
 
-// Configurar o ciclo de 3 segundos visível, 3 segundos invisível
-setInterval(() => {
-    alternarVisibilidade();
-}, 10000);
+// Configurar visibilidade
+// setInterval(() => {
+//     alternarVisibilidade();
+// }, 10000);
