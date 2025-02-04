@@ -8,6 +8,10 @@ body {
     background-color: transparent;
   }
   
+  #timer-display{
+    color: #f1f1f1;
+  }
+
   .timer-container {
     text-align: center;
     background: transparent;
@@ -29,7 +33,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     background-color: #007bff;
-    color: #fff;
+    color: #f1f1f1;
     transition: background-color 0.3s ease;
   }
   
