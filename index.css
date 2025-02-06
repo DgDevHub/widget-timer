@@ -5,39 +5,116 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: transparent;
+    background-color: #f1f1f1;
   }
-  
-  #timer-display{
-    color: #f1f1f1;
+  #suport{
+    position: relative;
+    left: 16rem;
+    width: 500px;
+    height: 150px;
+    background-color: #f1f1f1;
+    border: 6px solid #2d2828;
+    border-radius: 15px;
   }
-
   .timer-container {
-    text-align: center;
-    background: transparent;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    right: 15.5rem;
+    background-color: transparent;
+    width: 500px;
+    height: 150px;
+    position: relative;
+    overflow: hidden; 
   }
   
   #timer-display {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: #1d1919;
+    background-color: transparent;
+    position: relative;
+    top: -2.5rem;
+    left: 60px;
+    font-size: 4rem;
+    margin-bottom: -50px;
   }
   
+  .buttons{
+    background-color: transparent;
+    display: flex;
+    justify-content: start;
+  }
+
   .buttons button {
     font-size: 1.2rem;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
+    position: relative;
+    left: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    border: 1px solid #2d2828;
+    border-radius: 10%;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #1a94da;
     color: #f1f1f1;
     transition: background-color 0.3s ease;
   }
   
+  #reiniciar{
+    background-color: #1b75a8;
+    font-size: 1.2rem;
+    border: 1px solid #2d2828;
+    border-radius: 5px;
+    padding: 0px 20px;
+    cursor: pointer;
+    position: relative;
+    right: 1.3rem;
+    top: -7.7rem;
+    transition: background-color 0.3s ease;
+  }
+
   .buttons button:hover {
     background-color: #0056b3;
   }
+
+  #mini{
+    position: relative;
+    top: -86px;
+    left: 23rem;
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+  }
+
+  #blue{
+    position: relative;
+    left: 4.75rem;
+    width: 120px;
+    height: 100%;
+    border-radius: 0px 18px 18px 0px;
+    background-color: #1a94da;
+    z-index: -0;
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
   
+  #icon-refresh{
+    width: 12px;
+    height: 12px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%); */

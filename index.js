@@ -1,13 +1,16 @@
-let tempo = 0; // Tempo em segundos
+let tempo = 0; 
 let intervaloTimer = null;
 
-// Elementos do DOM
+// DOM
 const displayTimer = document.getElementById("timer-display");
 const botaoAdicionar = document.getElementById("add-time");
 const botaoIniciar = document.getElementById("play");
 const botaoPausar = document.getElementById("pause");
 const botaoReiniciar = document.getElementById("reiniciar");
 const widget = document.getElementById("widget");
+const miniDg = document.getElementById("mini");
+const blue = document.getElementById("blue")
+const suport = document.getElementById("suport")
 
 // Sumir
 function sumirButtons(){
@@ -15,6 +18,9 @@ function sumirButtons(){
     botaoIniciar.style.opacity = "0"
     botaoPausar.style.opacity = "0"
     botaoReiniciar.style.opacity = "0"
+    miniDg.style.opacity = "0"
+    blue.style.opacity = "0"
+    suport.style.opacity = "0"
 }
 
 // formatar 
@@ -56,6 +62,9 @@ botaoIniciar.addEventListener("click", () => {
                 botaoIniciar.style.opacity = "1"
                 botaoPausar.style.opacity = "1"
                 botaoReiniciar.style.opacity = "1"
+                miniDg.style.opacity = "1"
+                blue.style.opacity = "1"
+                suport.style.opacity = "1"
             }
         }, 1000);
     }
