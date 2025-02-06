@@ -21,6 +21,7 @@ function sumirButtons(){
     miniDg.style.opacity = "0"
     blue.style.opacity = "0"
     suport.style.opacity = "0"
+    displayTimer.style.color = "#f1f1f1"
 }
 
 // formatar 
@@ -65,6 +66,7 @@ botaoIniciar.addEventListener("click", () => {
                 miniDg.style.opacity = "1"
                 blue.style.opacity = "1"
                 suport.style.opacity = "1"
+                displayTimer.style.color = "#1d1919"
             }
         }, 1000);
     }
